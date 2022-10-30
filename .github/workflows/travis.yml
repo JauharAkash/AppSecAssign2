@@ -2,7 +2,7 @@
 
 name: CI
 python:
-  - "3.10"
+  - "3.7"
 
 on: [push]
 jobs:
