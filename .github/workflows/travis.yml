@@ -5,8 +5,8 @@ jobs:
   buid:
     runs-on: ubuntu-latest
     steps:
-      - pip install django
-      - pip install django_cryptography
+      - run: pip install django
+      - run: pip install django_cryptography
     before_script:
       - cd LegacySite
     script:
