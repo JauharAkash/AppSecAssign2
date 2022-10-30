@@ -1,4 +1,5 @@
 language: python3
+on: [push]
 install:
   - - pip3 install django
 before_script:
