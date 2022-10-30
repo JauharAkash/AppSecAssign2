@@ -5,6 +5,7 @@ python:
 on: [push]
 jobs:
   steps:
+  run:
     - pip install django
     - pip install django_cryptography
   before_script:
