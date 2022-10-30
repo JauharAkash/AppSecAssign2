@@ -4,16 +4,17 @@ python:
 
 on: [push]
 jobs:
-  steps:
-  run:
-    - pip install django
-    - pip install django_cryptography
-  before_script:
-    - cd LegacySite
-  script:
-    - python manage.py makemigrations LegacySite
-    - python manage.py makemigrations
-    - python manage.py migrate
-    - sh import_dbs.sh
-    - python manage.py test
+  buid:
+    runs-on: ubuntu-latest
+    steps:
+      - pip install django
+      - pip install django_cryptography
+    before_script:
+      - cd LegacySite
+    script:
+      - python manage.py makemigrations LegacySite
+      - python manage.py makemigrations
+      - python manage.py migrate
+      - sh import_dbs.sh
+      - python manage.py test
           
