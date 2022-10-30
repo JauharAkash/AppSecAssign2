@@ -1,9 +1,9 @@
 language: python3
 on: [push]
-install:
-  - - pip3 install django
-before_script:
-  - cd LegacySite
-script:
-  - python3 manage.py test
+  install:
+    - pip3 install django
+  before_script:
+    - cd LegacySite
+  script:
+    - python3 manage.py test
           
