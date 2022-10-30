@@ -35,17 +35,23 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-install:
+
+
+name: github-actions
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  
+  
+steps:
   - pip3 install django
   - python3 manage.py makemigrations LegacySite
   - python3 manage.py makemigrations
   - python3 manage.py migrate
   - sh import_dbs.sh
-  
-  
-steps:
-      - run: cd GiftcardSite
-      - run: cd LegacySite
-      - python3 manage.py test
+  - run: cd GiftcardSite
+  - run: cd LegacySite
+  - python3 manage.py test
 
           
