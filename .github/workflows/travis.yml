@@ -8,16 +8,14 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-  
-  
-steps:
-  - pip3 install django
-  - python3 manage.py makemigrations LegacySite
-  - python3 manage.py makemigrations
-  - python3 manage.py migrate
-  - sh import_dbs.sh
-  - run: cd GiftcardSite
-  - run: cd LegacySite
-  - python3 manage.py test
+    steps:
+      - pip3 install django
+      - python3 manage.py makemigrations LegacySite
+      - python3 manage.py makemigrations
+      - python3 manage.py migrate
+      - sh import_dbs.sh
+      - run: cd GiftcardSite
+      - run: cd LegacySite
+      - python3 manage.py test
 
           
