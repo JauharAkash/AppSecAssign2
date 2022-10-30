@@ -37,7 +37,6 @@ jobs:
           echo test, and deploy your project.
 
 
-name: github-actions
 on: [push]
 jobs:
   build:
