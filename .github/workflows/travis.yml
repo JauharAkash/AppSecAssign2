@@ -1,19 +1,8 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
-
-on: [push]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - pip3 install django
-      - python3 manage.py makemigrations LegacySite
-      - python3 manage.py makemigrations
-      - python3 manage.py migrate
-      - sh import_dbs.sh
-      - run: cd GiftcardSite
-      - run: cd LegacySite
-      - python3 manage.py test
-
+language: python3
+install:
+  - - pip3 install django
+before_script:
+  - cd LegacySite
+script:
+  - python3 manage.py test
           
