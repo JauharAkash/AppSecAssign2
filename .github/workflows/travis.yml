@@ -1,5 +1,6 @@
 language: python3
-job:
+on: [push]
+jobs:
   install:
     - pip3 install django
   before_script:
