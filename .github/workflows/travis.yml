@@ -2,15 +2,16 @@ language: python
 python:
   - "3.7"
 
-install:
-  - pip install django
-  - pip install django_cryptography
-before_script:
-  - cd LegacySite
-script:
-  - python manage.py makemigrations LegacySite
-  - python manage.py makemigrations
-  - python manage.py migrate
-  - sh import_dbs.sh
-  - python manage.py test
+steps:
+  install:
+    - pip install django
+    - pip install django_cryptography
+  before_script:
+    - cd LegacySite
+  script:
+    - python manage.py makemigrations LegacySite
+    - python manage.py makemigrations
+    - python manage.py migrate
+    - sh import_dbs.sh
+    - python manage.py test
           
