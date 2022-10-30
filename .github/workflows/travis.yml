@@ -2,7 +2,8 @@ language: python3
 on: [push]
 jobs:
   install:
-    - pip3 install django
+    - pip install django
+    - pip install django_cryptography
   before_script:
     - cd LegacySite
   script:
