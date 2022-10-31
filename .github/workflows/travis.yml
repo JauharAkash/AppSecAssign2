@@ -14,5 +14,5 @@ jobs:
           cd GiftcardSite
           cd LegacySite
       - run: pwd
-      - run: python manage.py test
+      - run: python GiftcardSite/manage.py test
           
