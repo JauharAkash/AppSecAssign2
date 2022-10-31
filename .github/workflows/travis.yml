@@ -9,10 +9,10 @@ jobs:
       - uses: actions/checkout@main
       - run: pwd
       - run: ls -l
-      - run: cd GiftcardSite
       - run: pwd
       - run: |
           cd GiftcardSite
+      - run: pwd
       - run: pip install django
       - run: python manage.py makemigrations LegacySite
       - run: python manage.py makemigrations
