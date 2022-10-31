@@ -6,10 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
         working-directory: ./GiftcardSite
-
         
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
+      -  working-directory: ${{env.working-directory}}
       - run: pip install django
       - run: pip install django_cryptography
       - run: python manage.py makemigrations LegacySite
