@@ -11,8 +11,9 @@ jobs:
       - run: ls -l
       - run: cd GiftcardSite
       - run: pwd
+      - run: |
+          cd GiftcardSite
       - run: pip install django
-      - run: cd GiftcardSite
       - run: python manage.py makemigrations LegacySite
       - run: python manage.py makemigrations
       - run: python manage.py migrate
