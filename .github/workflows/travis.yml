@@ -9,8 +9,8 @@ jobs:
       - uses: actions/checkout@main
       - run: pwd
       - run: ls -l
-      - run: pwd
       - run: |
+          pwd
           cd GiftcardSite
           cd LegacySite
       - run: pwd
