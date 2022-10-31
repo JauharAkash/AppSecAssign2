@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
         
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@main
       - run: pwd
-      - run: cd GiftcardSite
+      - run: cd GiftcardSite/
       - run: pwd
       - run: pip install django
       - run: pip install django_cryptography
