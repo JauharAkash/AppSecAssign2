@@ -4,11 +4,12 @@ on: [push]
 jobs:
   buid:
     runs-on: ubuntu-latest
+    env:
+        working-directory: ./LegacySite
     steps:
+      - uses: actions/checkout@v2
       - run: pip install django
       - run: pip install django_cryptography
-      - env:
-        working-directory: ./LegacySite
       - run: python manage.py makemigrations LegacySite
       - run: python manage.py makemigrations
       - run: python manage.py migrate
