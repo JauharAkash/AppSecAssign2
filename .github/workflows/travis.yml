@@ -7,7 +7,6 @@ jobs:
     steps:
       - run: pip install django
       - run: pip install django_cryptography
-      - run: dir LegacySite
       - run: python manage.py makemigrations LegacySite
       - run: python manage.py makemigrations
       - run: python manage.py migrate
