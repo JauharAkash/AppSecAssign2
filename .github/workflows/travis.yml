@@ -5,7 +5,9 @@ jobs:
   buid:
     runs-on: ubuntu-latest
     env:
-        working-directory: ./LegacySite
+        working-directory: ./GiftcardSite
+
+        
     steps:
       - uses: actions/checkout@v2
       - run: pip install django
