@@ -4,10 +4,9 @@ on: [push]
 jobs:
   buid:
     runs-on: ubuntu-latest
-    env:
-        working-directory: ./GiftcardSite
         
     steps:
+      - run: ls
       - run: cd ./GiftcardSite
       - run: pip install django
       - run: pip install django_cryptography
