@@ -11,6 +11,7 @@ jobs:
       - run: ls -l
       - run: pwd
       - run: |
+          cd GiftcardSite
           cd LegacySite
       - run: pwd
       - run: pip install django
