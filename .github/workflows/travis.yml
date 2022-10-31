@@ -8,7 +8,9 @@ jobs:
       - run: pip install django
       - run: pip install django_cryptography
       - run: cd ..
+      - run: ls
       - run: cd ..
+      - run: ls
       - run: cd GiftcardSite
       - run: python manage.py makemigrations LegacySite
       - run: python manage.py makemigrations
