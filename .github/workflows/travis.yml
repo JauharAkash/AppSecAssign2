@@ -12,7 +12,7 @@ jobs:
       - run: cd GiftcardSite
       - run: pwd
       - run: pip install django
-      - run: pip install django_cryptography
+      - run: cd GiftcardSite
       - run: python manage.py makemigrations LegacySite
       - run: python manage.py makemigrations
       - run: python manage.py migrate
