@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@main
       - run: pwd
       - run: ls -l
-      - run: cd /GiftcardSite
+      - run: cd GiftcardSite
       - run: pwd
       - run: pip install django
       - run: pip install django_cryptography
