@@ -9,5 +9,6 @@ jobs:
       - uses: actions/checkout@main
       - run: pwd
       - run: ls -l
+      - run install Django
       - run: python GiftcardSite/manage.py test
           
