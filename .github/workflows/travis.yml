@@ -9,7 +9,8 @@ jobs:
         
     steps:
       - uses: actions/checkout@master
-      - run: working-directory: ${{env.working-directory}}
+      - run: ls -R
+        working-directory: ${{env.working-directory}}
       - run: pip install django
       - run: pip install django_cryptography
       - run: python manage.py makemigrations LegacySite
