@@ -1,5 +1,3 @@
-
-
 on: [push]
 jobs:
   buid:
@@ -10,5 +8,7 @@ jobs:
       - run: pwd
       - run: ls -l
       - run: pip install django
+      - run: pip install django_cryptography
+      - run: pip install django-environ
       - run: python GiftcardSite/manage.py test
           
